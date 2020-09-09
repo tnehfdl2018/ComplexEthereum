@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="coin_name">
+        <item>BNB</item>
+        <item>MEX</item>
+        <item>SXP</item>
+        <item>LINK</item>
+        <item>AOA</item>
+    </string-array>
+
+</resources>
