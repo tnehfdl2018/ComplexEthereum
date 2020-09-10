@@ -82,17 +82,22 @@ public class MainActivity extends AppCompatActivity {
             Log.e("선택한 주소 값 ", address);
 
             // 외부 asyncTask
-//            RunningAsyncTask runningAsyncTask = new RunningAsyncTask(MainActivity.this);
-//            runningAsyncTask.execute(address);
+            RunningAsyncTask runningAsyncTask = new RunningAsyncTask(MainActivity.this); // 스피너 설정을 위해 파라미터로 activity 전달
+            runningAsyncTask.execute(address); // 조회할 주소를 파라미터로 같이 전달
 
             // 내부 asyncTask
 //            AsyncTaskTest asyncTaskTest = new AsyncTaskTest();
-//            asyncTaskTest.execute(address);
+//            asyncTaskTest.execute(address); // 조회할 주소를 파라미터로 같이 전달
 
             // 인터페이스
             // 초기값 (인터페이스 객체, 스피너 선택값)
-            EthereumInfo ethereumThread = new EthereumInfo(etherInterface, choiceValue);
-            ethereumThread.start();
+//            EthereumInfo ethereumThread = new EthereumInfo(etherInterface, choiceValue);
+//            progressBar = findViewById(R.id.progress_circular);
+//
+//            progressBar.setVisibility(View.VISIBLE);
+//            progressBar.setIndeterminate(true);
+//            progressBar.setMax(100);
+//            ethereumThread.start();
         }
     };
 
@@ -135,6 +140,9 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("최종 결과 ", results.get("tokenName"));
                         textString.setText(results.get("value"));
                         textKinds.setText(results.get("tokenName"));
+
+                        // 프로그래스바 끄기
+                        progressBar.setVisibility(View.INVISIBLE);
                     }
                 }
             });

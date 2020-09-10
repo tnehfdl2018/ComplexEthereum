@@ -1,6 +1,9 @@
 package com.soobineey.complexethereum;
 
+import android.app.Activity;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -26,6 +29,8 @@ public class EthereumInfo extends Thread {
     // 단가와 코인 코드를 담을 변수
     public static String value;
     public static String tokenName;
+
+    private ProgressBar progressBar;
 
     // 조회할 주소값을 담을 변수
     private String address = null;
