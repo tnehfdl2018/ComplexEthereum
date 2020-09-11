@@ -91,12 +91,12 @@ public class MainActivity extends AppCompatActivity {
 
       // 인터페이스
       // 초기값 (인터페이스 객체, 스피너 선택값)
-      EthereumInfo ethereumThread = new EthereumInfo(etherInterface, address);
+      EthereumInfo ethereumInfo = new EthereumInfo(etherInterface, address);
 
       progressBar.setVisibility(View.VISIBLE);
       progressBar.setIndeterminate(true);
       progressBar.setMax(100);
-      ethereumThread.start();
+        ethereumInfo.start();
     }
   };
 
